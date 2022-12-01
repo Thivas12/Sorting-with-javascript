@@ -1,0 +1,76 @@
+<html>
+<head>
+<style>
+    h1{
+        font-style: sans-serif;
+        color: rgb(136, 29, 236);
+        align-items: center;
+        margin-left: 600px;
+        margin-top: 400px;
+    }
+    #button{
+        cursor: pointer;
+        margin-left: 800px;
+        border: none;
+        background-color: rgb(20, 188, 20);
+        color: black;
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    body{
+        background-color: bisque;
+    }
+</style>
+<script type="text/javascript">
+var num = 0
+number = 0
+var numarray = new Array()
+
+function array_size()
+{
+    num = prompt("Enter how many number to be sorted", "0")
+    number = parseInt(num)
+    get_numbers()
+}
+
+function get_numbers()
+{
+    if(number != null && number != ' ')
+    {
+        for(i=0; i<number; i++)
+        {
+            n = prompt("Enter number "+(i+1),"o")
+            numarray[i] = parseInt(n)
+        }
+    }
+    sorting()
+}
+
+function sorting()
+{
+    document.write("<body><h1><style>h1{\
+        font-style: sans-serif;\
+        color: rgb(136, 29, 236);\
+        align-items: center;\
+        margin-left: 800px;\
+        margin-top: 400px;\
+}body{background-color: bisque;\
+    }</style>Sorted Array: ",numarray.sort(sortnumber))
+
+}
+
+function sortnumber(a,b)
+{
+    return a-b
+}
+
+</script>
+</head>
+<body>
+    <h1>Click the button to get the number sorted</h1>
+    <input id="button" type="button" onclick="array_size()" value="Get Array size">
+</body>
+</html>
